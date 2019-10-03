@@ -1,15 +1,10 @@
 <template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
     <v-card class="overflow-hidden">
         <v-app-bar
-            absolute
             color="#43a047"
             dark
-            shrink-on-scroll
-            prominent
-            src="https://picsum.photos/1920/1080?random"
-            fade-img-on-scroll
-            scroll-target="#scrolling-techniques-5"
-            scroll-threshold="500">
+            src="https://picsum.photos/1920/1080?random">
+
             <template v-slot:img="{ props }">
                 <v-img
                     v-bind="props"
@@ -25,30 +20,32 @@
 
             <modal-login></modal-login>
         </v-app-bar>
-        <v-sheet
-            id="scrolling-techniques-5"
-            class="overflow-y-auto">
-            <v-container style="height: 1500px;"></v-container>
-        </v-sheet>
-        <!--<v-navigation-drawer-->
-            <!--app-->
-            <!--temporary=""-->
-            <!--v-model="drawer">-->
-            <!--<v-list>-->
-                <!--<v-list-tile-->
-                    <!--v-for="link of links"-->
-                    <!--:key="link.title"-->
-                    <!--:to="link.url"-->
-                    <!--@click="logout(link.title)">-->
-                    <!--<v-list-tile-action>-->
-                        <!--<v-icon>{{link.icon}}</v-icon>-->
-                    <!--</v-list-tile-action>-->
-                    <!--<v-list-tile-content>-->
-                        <!--<v-list-tile-title v-text="link.title"></v-list-tile-title>-->
-                    <!--</v-list-tile-content>-->
-                <!--</v-list-tile>-->
-            <!--</v-list>-->
-        <!--</v-navigation-drawer>-->
+
+        <!--<v-sheet-->
+            <!--id="scrolling-techniques-5"-->
+            <!--class="overflow-y-auto"-->
+            <!--max-height="1000">-->
+            <!--<v-container style="height: 1500px;"></v-container>-->
+        <!--</v-sheet>-->
+        <v-navigation-drawer
+            app
+            temporary=""
+            v-model="drawer">
+            <v-list>
+                <v-list-tile
+                    v-for="link of links"
+                    :key="link.title"
+                    :to="link.url"
+                    @click="logout(link.title)">
+                    <v-list-tile-action>
+                        <v-icon>{{link.icon}}</v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                        <v-list-tile-title v-text="link.title"></v-list-tile-title>
+                    </v-list-tile-content>
+                </v-list-tile>
+            </v-list>
+        </v-navigation-drawer>
     </v-card>
 
 </template>

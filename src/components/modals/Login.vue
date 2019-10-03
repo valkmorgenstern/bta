@@ -1,7 +1,7 @@
 <template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
     <v-row justify="center">
         <v-dialog v-model="dialog" persistent max-width="600px">
-            <template  v-slot:activator="{ on }">
+            <template v-slot:activator="{ on }">
                 <div class="flex-grow-1"></div>
                 <v-btn icon v-on="on">
                     <v-icon>mdi-login-variant</v-icon>
@@ -31,9 +31,20 @@
                     </v-container>
                 </v-card-text>
                 <v-card-actions>
-                    <div class="flex-grow-1"></div>
-                    <modal-registration></modal-registration>
-                    <v-btn color="blue darken-1" text @click="dialog = false">Войти</v-btn>
+                    <v-col cols="12">
+                        <v-row justify="center">
+                            <v-col
+                                cols="6"
+                            >
+                                <modal-registration></modal-registration>
+                            </v-col>
+                            <v-col
+                                cols="6"
+                            >
+                                <v-btn color="black" text @click="dialog = false">Войти</v-btn>
+                            </v-col>
+                        </v-row>
+                    </v-col>
                 </v-card-actions>
             </v-card>
         </v-dialog>
@@ -42,6 +53,7 @@
 
 <script>
     import Registration from '../../components/modals/Registration'
+
     export default {
         name: "Login",
         data: () => ({

@@ -3,7 +3,7 @@
         <v-dialog v-model="dialog" persistent max-width="600px">
             <template v-slot:activator="{ on }">
                 <div class="flex-grow-1"></div>
-                <v-btn color="blue darken-1" text v-on="on">Создать аккаунт</v-btn>
+                <v-btn color="black" text v-on="on">Регистрация</v-btn>
             </template>
 
             <!--Вот так выглядит окошко-->
@@ -76,7 +76,7 @@
                 </v-card-text>
                 <v-card-actions>
                     <div class="flex-grow-1"></div>
-                    <v-btn color="blue darken-1" text @click="dialog = false" :disabled="!valid">Создать</v-btn>
+                    <v-btn color="black" text @click="dialog = false" :disabled="!valid">Создать</v-btn>
                 </v-card-actions>
             </v-card>
         </v-dialog>
