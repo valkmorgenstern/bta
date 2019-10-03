@@ -3,10 +3,10 @@
         <v-dialog v-model="dialog" persistent max-width="600px">
             <template  v-slot:activator="{ on }">
                 <div class="flex-grow-1"></div>
-                <v-btn icon v-on="on">
-                    <v-icon>mdi-login-variant</v-icon>
-                </v-btn>
+                <v-btn  color="blue darken-1" text v-on="on">Создать аккаунт</v-btn>
             </template>
+
+            <!--Вот так выглядит окошко-->
             <v-card>
                 <v-card-title>
                     <span class="headline">User Profile</span>

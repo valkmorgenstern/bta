@@ -23,13 +23,11 @@
 
             <div class="flex-grow-1"></div>
 
-            <modal-registration></modal-registration>
+            <modal-login></modal-login>
         </v-app-bar>
         <v-sheet
             id="scrolling-techniques-5"
             class="overflow-y-auto">
-            <!--max-height="600"-->
-        <!--&gt;-->
             <v-container style="height: 1500px;"></v-container>
         </v-sheet>
         <!--<v-navigation-drawer-->
@@ -56,13 +54,13 @@
 </template>
 
 <script>
-    import Registration from '../../components/modals/Registration'
+    import Login from '../../components/modals/Login'
 
     export default {
         name: "MainNavbar",
         props: ['drawer'],
         components: {
-            ModalRegistration: Registration
+            ModalLogin: Login
         }
     }
 </script>
